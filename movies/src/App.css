@@ -1,4 +1,11 @@
 #root {
+  min-height: 100vh;
+  width: 1280px;
+}
+
+.app {
+  margin-top: 75px;
+  min-height: 100vh;
   max-width: 1280px;
 }
 

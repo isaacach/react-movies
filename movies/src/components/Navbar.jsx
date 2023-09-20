@@ -12,7 +12,7 @@ export default function Navbar() {
       </div>
       <div className="links">
         <div className="link-wrapper">
-          <Link>Tv Shows</Link>
+          <Link>TV Shows</Link>
         </div>
         <div className="link-wrapper">
           <Link>Movies</Link>

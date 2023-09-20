@@ -1,5 +1,7 @@
 import { useEffect } from "react"
 import { getPopularMovies } from "../apiService"
+import SearchBar from "../components/SearchBar"
+import '../styles/home.css'
 
 export default function Home() {
 
@@ -11,6 +13,13 @@ export default function Home() {
     getPopMovies();
   },[])
   return (
-    <div></div>
+    <div className="home">
+      <div className="search-box">
+        <div className="search-text">
+          <h2>Discover millions of movies and TV shows </h2>
+        </div>
+        <SearchBar />
+      </div>
+    </div>
   )
 }

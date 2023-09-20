@@ -1,0 +1,30 @@
+form {
+  position: relative;
+  font-size: 1.1rem;
+}
+
+form input {
+  width: 700px;
+  height: 40px;
+  border-radius: 20px;
+  padding: 0 0 0 50px;
+  border: 0;
+  font-size: 1.3rem;
+}
+
+form input:focus {
+  outline: 2px solid rgb(94, 94, 107);
+}
+
+form .search {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  background-color: rgb(12, 189, 189);
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  border-radius: 20px;
+}
