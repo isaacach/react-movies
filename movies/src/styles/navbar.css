@@ -1,0 +1,35 @@
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+  height: 75px;
+  width: 100%;
+  background-color: #313638;
+}
+
+nav .logo {
+  display:  flex;
+  align-items: center;
+  height: 100%;
+}
+
+nav h2{
+font-size: 2rem;
+margin: 0;
+text-align: end;
+}
+
+.links {
+  display: flex;
+  gap: 2rem;
+}
+
+.links a {
+  color: unset;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
