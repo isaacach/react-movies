@@ -1,5 +1,4 @@
 import { MOVIEDB_KEY } from '../keys.js';
-import axios from 'axios'
 
 const options = {
   headers: {
@@ -9,7 +8,11 @@ const options = {
 };
 
 export const getPopularMovies = async () => {
-  axios.get('https://api.themoviedb.org/3/movie/popular?language=en-US&page=1', options)
-    .then(data => console.log(data))
-    .catch(error => console.log(error))
+    try {
+      const res = await fetch('https://api.themoviedb.org/3/movie/popular?language=en-US&page=1', options);
+      const data =  await res.json();
+      return await data.results;
+    } catch (err) {
+      console.log(err);
+    }
 }
