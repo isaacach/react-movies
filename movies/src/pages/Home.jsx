@@ -1,21 +1,10 @@
-import { useEffect, useState } from "react"
-import { getPopularMovies } from "../apiService"
+
 import SearchBar from "../components/SearchBar"
 import '../styles/home.css'
 import Slider from "../components/Slider"
 
 export default function Home() {
-  const [media, setMedia] = useState([]);
 
-  console.log(media);
-
-  useEffect(() => {
-    const getPopMovies = async () => {
-      setMedia(await getPopularMovies())
-    }
-
-    getPopMovies();
-  },[])
 
   return (
     <div className="home">
@@ -25,7 +14,7 @@ export default function Home() {
         </div>
         <SearchBar />
       </div>
-      <Slider media={media}/>
+      <Slider />
     </div>
   )
 }
