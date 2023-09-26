@@ -58,16 +58,19 @@ export default function Slider() {
   });
 
   return (
-    <div className="slider" ref={backgroundRef} style={{ backgroundImage: `url(${sliderBg})`}} >
+    <div className="slider-wrapper">
       <div className="trending">
+        <p>Trending</p>
         <input ref={inputRef} type="checkbox" onChange={handleInputChange}/>
         <p className="movies-check">Movies</p>
         <p className="shows-check">TV Shows</p>
         <div className="check-slider"></div>
       </div>
+    <div className="slider" ref={backgroundRef} style={{ backgroundImage: `url(${sliderBg})`}} >
       <div className="media">
       {renderedMedia}
       </div>
+    </div>
     </div>
   );
 }
