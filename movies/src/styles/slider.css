@@ -34,6 +34,7 @@
   border-radius: 20px;
   appearance: none;
   margin: 0;
+  cursor: pointer;
 }
 
 .trending input:checked ~ .check-slider {
@@ -104,4 +105,16 @@
 .slider .poster-wrapper img {
   width: 100%;
   object-fit: cover;
+}
+
+.media-card {
+  animation: fade-in .5s ;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
 }

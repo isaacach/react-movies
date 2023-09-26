@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useRef, useState, useEffect } from "react";
-import {getPopularMovies, getPopularShows } from '../apiService.js';
+import { getPopularMovies, getPopularShows } from '../apiService.js';
 import "../styles/slider.css";
 
 export default function Slider() {
