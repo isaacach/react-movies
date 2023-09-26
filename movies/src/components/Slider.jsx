@@ -5,7 +5,9 @@ import "../styles/slider.css";
 
 export default function Slider() {
   const inputRef = useRef(null)
+  const backgroundRef = useRef(null)
   const [media, setMedia] = useState([]);
+  const [sliderBg, setSliderBg] = useState('')
 
   console.log(media);
 
@@ -30,13 +32,25 @@ export default function Slider() {
       getPopShows();
     }
   }
+
+  const handleMouseOver = (e) => {
+    console.log(e.target.id);
+    setSliderBg(`https://image.tmdb.org/t/p/original/${e.target.id}`)
+  }
+
+  if (backgroundRef) {
+    console.log(backgroundRef);
+  }
+
   const renderedMedia = media.map((med, i) => {
     return (
-      <div className="media-card" key={i}>
+      <div className="media-card" key={i} >
         <div className="poster-wrapper">
           <img
             src={`https://image.tmdb.org/t/p/original/${med.poster_path}`}
             alt={med.title}
+            id={med.backdrop_path}
+            onMouseEnter={handleMouseOver}
           />
         </div>
       </div>
@@ -44,7 +58,7 @@ export default function Slider() {
   });
 
   return (
-    <div className="slider">
+    <div className="slider" ref={backgroundRef} style={{ backgroundImage: `url(${sliderBg})`}} >
       <div className="trending">
         <input ref={inputRef} type="checkbox" onChange={handleInputChange}/>
         <p className="movies-check">Movies</p>
