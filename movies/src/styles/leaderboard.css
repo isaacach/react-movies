@@ -1,0 +1,27 @@
+
+
+.leaderboard-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.leaderboard-row {
+  display: flex;
+  width: 100%;
+}
+
+span {
+  margin-right: 10px;
+  font-size: 1.2rem;
+  color: rgb(12, 189, 189);
+}
+
+.leaderboard-row .title {
+  width: 400px;
+}
+
+.leaderboard-row .vote-count {
+  display: flex;
+}
+

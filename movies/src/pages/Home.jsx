@@ -2,6 +2,7 @@
 import SearchBar from "../components/SearchBar"
 import '../styles/home.css'
 import Slider from "../components/Slider"
+import Leaderbaord from "../components/Leaderboard"
 
 export default function Home() {
 
@@ -15,6 +16,7 @@ export default function Home() {
         <SearchBar />
       </div>
       <Slider />
+      <Leaderbaord />
     </div>
   )
 }
