@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getTopRated } from "../apiService";
-import ProgressBar from 'react-bootstrap/ProgressBar';
 import '../styles/leaderboard.css'
+import VoteAverageBar from "./VoteAverageBar";
 
 export default function Leaderbaord() {
   const [topRated, setTopRated] = useState([]);
@@ -16,14 +16,13 @@ export default function Leaderbaord() {
   },[]);
 
   const renderedTopRated = topRated.map((movie, i) => {
-    const now = movie.vote_average * 10
     return (
       <div className="leaderboard-row" key={i}>
         <p className="title"><span># {i + 1}</span>{movie.title}</p>
-        <p>Popularity Score: {movie.popularity.toFixed(1)}</p>
+        <p className="popularity">Popularity Score: {movie.popularity.toFixed(1)}</p>
         <div className="vote-count">
-          <ProgressBar now={now} label={`${now}%`}/>
-          <p>{movie.vote_count}</p>
+          <VoteAverageBar score={movie.vote_average}/>
+          <p className="votes">{movie.vote_count} votes</p>
         </div>
       </div>
     );
